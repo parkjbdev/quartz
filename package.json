@@ -30,9 +30,7 @@
     "blog",
     "quartz"
   ],
-  "bin": {
-    "quartz": "./quartz/bootstrap-cli.mjs"
-  },
+  "bin": "./quartz/bootstrap-cli.mjs",
   "dependencies": {
     "@clack/prompts": "^0.7.0",
     "@floating-ui/dom": "^1.5.3",
@@ -106,5 +104,6 @@
     "prettier": "^3.1.1",
     "tsx": "^4.6.2",
     "typescript": "^5.3.3"
-  }
+  },
+  "packageManager": "yarn@4.0.2"
 }
