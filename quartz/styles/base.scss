@@ -104,9 +104,9 @@ a {
 
 .page {
   @media all and (max-width: $fullPageWidth) {
-    margin: 0 auto;
+    margin: 0 0;
     padding: 0 1rem;
-    max-width: $pageWidth;
+    max-width: $fullPageWidth;
   }
 
   & article {
@@ -163,7 +163,8 @@ a {
     }
 
     & .sidebar.left {
-      left: calc(calc(100vw - $pageWidth) / 2 - $sidePanelWidth);
+      left: 0;
+      // left: calc(calc(100vw - $pageWidth) / 2 - $sidePanelWidth);
       @media all and (max-width: $fullPageWidth) {
         gap: 0;
         align-items: center;
@@ -171,7 +172,8 @@ a {
     }
 
     & .sidebar.right {
-      right: calc(calc(100vw - $pageWidth) / 2 - $sidePanelWidth);
+      right: 0;
+      // right: calc(calc(100vw - $pageWidth) / 2 - $sidePanelWidth);
       & > * {
         @media all and (max-width: $fullPageWidth) {
           flex: 1;
@@ -181,7 +183,7 @@ a {
   }
 
   & .page-header {
-    width: $pageWidth;
+    width: calc(100vw - $sidePanelWidth * 2);
     margin: $topSpacing auto 0 auto;
     @media all and (max-width: $fullPageWidth) {
       width: initial;
@@ -193,11 +195,9 @@ a {
   & footer {
     margin-left: auto;
     margin-right: auto;
-    width: $pageWidth;
+    width: calc(100vw - $sidePanelWidth * 2);
     @media all and (max-width: $fullPageWidth) {
-      width: initial;
-      margin-left: 0;
-      margin-right: 0;
+      width: 90vw;
     }
   }
 }
