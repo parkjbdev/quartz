@@ -153,6 +153,9 @@ a {
       box-sizing: border-box;
       padding: 0 4rem;
       position: fixed;
+      overflow-x: hidden;
+      overflow-y: auto;
+      max-height: calc(100vh - $topSpacing);
       @media all and (max-width: $fullPageWidth) {
         position: initial;
         flex-direction: row;
