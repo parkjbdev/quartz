@@ -193,9 +193,23 @@ export function renderPage(
     </div>
   )
 
+  const __googleAnalytics = `
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8XEDCYQX45"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8XEDCYQX45');
+</script>
+`
+    // const GoogleAnalytics= <div dangerouslySetInnerHTML={{ __html: __googleAnalytics }}></div>
+
   const doc = (
     <html>
       <Head {...componentData} />
+      <div dangerouslySetInnerHTML={{ __html: __googleAnalytics }}></div>
+
       <body data-slug={slug}>
         <div id="quartz-root" class="page">
           <Body {...componentData}>
